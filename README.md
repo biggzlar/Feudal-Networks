@@ -1,5 +1,7 @@
 Continuing on [dmakian's](https://github.com/dmakian) implementation of https://arxiv.org/abs/1703.01161
 
+Since this is based on a deprecated universe-starter-agent, the following dependencies are required:
+
 # Dependencies
 
 * Python 2.7 or 3.5
