@@ -9,7 +9,7 @@ parser.add_argument('-w', '--num-workers', default=1, type=int,
 parser.add_argument('-r', '--remotes', default=None,
                     help='The address of pre-existing VNC servers and '
                          'rewarders to use (e.g. -r vnc://localhost:5900+15900,vnc://localhost:5901+15901).')
-parser.add_argument('-e', '--env-id', type=str, default="PongDeterministic-v4",
+parser.add_argument('-e', '--env-id', type=str, default="PongDeterministic-v0",
                     help="Environment id")
 parser.add_argument('-l', '--log-dir', type=str, default="/tmp/pong",
                     help="Log directory path")
@@ -17,7 +17,7 @@ parser.add_argument('-n', '--dry-run', action='store_true',
                     help="Print out commands rather than executing them")
 parser.add_argument('-m', '--mode', type=str, default='tmux',
                     help="tmux: run workers in a tmux session. nohup: run workers with nohup. child: run workers as child processes")
-parser.add_argument('-p', '--policy', type=str, default='lstm',
+parser.add_argument('-p', '--policy', type=str, default='feudal',
                     help="lstm or feudal policy")
 
 # Add visualise tag
