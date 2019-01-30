@@ -99,7 +99,7 @@ class FeudalPolicy(policy.Policy):
             g_hat = self.manager_lstm.output
             self.g = tf.nn.l2_normalize(g_hat, dim=1)
 
-            self.manager_vf = self._build_value(g_hat)
+            self.manager_vf = self._build_value(self.z)
             # self.manager_vf = tf.Print(self.manager_vf,[self.manager_vf])
 
     def _build_worker(self):
@@ -112,7 +112,7 @@ class FeudalPolicy(policy.Policy):
                                                 step_size=tf.shape(self.obs)[:1])
             flat_logits = self.worker_lstm.output
 
-            self.worker_vf = self._build_value(flat_logits)
+            self.worker_vf = self._build_value(self.z)
 
             U = tf.reshape(flat_logits,[-1,num_acts,self.k])
 
