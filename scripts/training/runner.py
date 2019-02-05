@@ -34,9 +34,7 @@ with tf.Session() as sess, sess.as_default():
     sess.run(init)
     saver = tf.train.Saver()
     # saver.restore(sess, tf.train.latest_checkpoint('/tmp/pong/train/'))
-
-    import ipdb; ipdb.set_trace()
-
+    
     while True:
         terminal_end = False
 
